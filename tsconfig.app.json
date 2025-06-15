@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    //esta linea hace que los archivos de las librerias no se comprueben
+    //en caso de que te de error una libreria de terceros de la cual no tienes control xd
+    //"skipLibCheck": true,
     "outDir": "./out-tsc/app",
     "types": []
   },
