@@ -2,8 +2,11 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// src/environments/environment.ts
 export const environment = {
-  production: false
+  production: false,
+  // AÑADE ESTO, incluso si el valor está vacío, para definir el tipo:
+  apiUrl: '' 
 };
 
 /*

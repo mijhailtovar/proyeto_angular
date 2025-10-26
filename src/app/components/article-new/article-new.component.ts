@@ -17,6 +17,10 @@ export class ArticleNewComponent implements OnInit {
   public status: string;
   public page_title: string;
 
+  // SOLUCIÓN: Declara las propiedades faltantes para el compilador AOT
+  public url: string; 
+  public is_edit: boolean; // Se asume que es booleano para el modo edición
+
   afuConfig = {
     multiple: false,
     formatsAllowed: ".jpg, .png, .gif, .jpeg",
@@ -49,9 +53,17 @@ export class ArticleNewComponent implements OnInit {
   ) {
     this.article = new Article('', '', '', null, null);
     this.page_title = 'Crear articulo';
+
+    // Asigna el valor de la URL aquí también, por si el HTML lo usa directamente
+    this.url = Global.url; 
+    
+    // Inicializa la variable de edición, asumiendo que este componente es de "Creación"
+    this.is_edit = false;
   }
 
   ngOnInit() {
+    // Si este componente se reutiliza para edición, la lógica de this.is_edit
+    // se establecería aquí, pero por ahora la inicializamos en false.
   }
 
   onSubmit() {
