@@ -17,7 +17,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    // *** SOLUCIÓN: Ignorar errores de tipado de librerías de terceros (como sweetalert) ***
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
